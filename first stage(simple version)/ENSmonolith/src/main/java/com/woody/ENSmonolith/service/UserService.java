@@ -5,14 +5,16 @@ import com.woody.ENSmonolith.model.User;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+import java.util.Set;
 
 
 public interface UserService {
 
-  List<Contact> getUserContacts();
+  Set<Contact> getUserContactsById(Integer id);
+
+  void addUserContactsById(Set<Contact> contacts, Integer id);
   User saveUser(User user);
-  User findByLogin(Integer id);
+  User findById(Integer id);
 
   User updateUser(User user);
 
