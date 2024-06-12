@@ -1,3 +1,6 @@
+jwt:
+  secret: 2345ho2j4h523j23j45l23k4
+  lifetime: 30m
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/ens

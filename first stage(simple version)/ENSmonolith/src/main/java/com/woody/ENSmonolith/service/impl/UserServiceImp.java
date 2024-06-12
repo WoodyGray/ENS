@@ -22,7 +22,8 @@ public class UserServiceImp implements UserService {
     @Override
     public Set<Contact> getUserContactsById(Integer id) {
         Optional<User> user = repository.findById(id);
-        return user.stream().findFirst().get().getContacts();
+        return user.map(User::getContacts).orElse(null);
+
     }
 
     @Override
